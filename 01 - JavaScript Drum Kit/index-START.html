@@ -58,7 +58,9 @@
 
     <script>
       const handleKeyPress = (ev) => {
-        console.log(ev);
+        const key = ev.keyCode;
+        const button = document.querySelector(`audio[data-key="${key}"]`);
+        button.play();
       };
 
       document.addEventListener('keydown', handleKeyPress);
